@@ -4,16 +4,25 @@ body {
   width: 100vw;
 }
 
+/* #splashImg {
+  position: relative;
+} */
+
 #search {
-  height: 10vmin;
+  height: 40vmin;
   background-color: rgba(153, 215, 243, 0.15);
   padding: 5vmin;
   justify-content: center;
   align-items: center;
   display: flex;
+  background-image: url("../images/splash.jpg");
+  background-position: center;
 }
 
 #search input {
+  /* position: absolute; */
+  left: 50px;
+  top: 150px;
   width: 80vw;
 }
 
@@ -59,6 +68,9 @@ body {
     display: flex;
     flex-direction: column;
   }
+  .card {
+    margin-left: 5px;
+  }
 }
 
 .footer {
@@ -68,4 +80,10 @@ body {
   justify-content: center;
   align-content: center;
   color: white;
+}
+
+@media only screen and (max-width: 480) {
+  .cards {
+    flex-direction: column;
+  }
 }
