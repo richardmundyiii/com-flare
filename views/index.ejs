@@ -1,105 +1,63 @@
 <%- include('./partials/header') %>
 
 <img src="images/splash.jpg" alt="Splash Image" style="width: 100%" />
-<div class="search">
-  <div class="panel-block">
-    <p class="control has-icons-left">
-      <input class="input" type="text" placeholder="Search..." id="searchBar" />
-    </p>
-  </div>
+
+<div class="container-fluid" id="search">
+  <form class="d-flex">
+    <input
+      type="text"
+      class="form-control me-2"
+      type="search"
+      placeholder="Search"
+    />
+    <button class="btn btn-outline-success" type="submit">Search</button>
+  </form>
 </div>
-<div class="testimonials">
-  <div class="card">
-    <div class="card-image">
-      <figure class="">
-        <img src="" alt="" />
-      </figure>
-    </div>
-    <div class="card-content">
-      <div class="media">
-        <div class="media-left">
-          <figure>
-            <img src="" alt="" />
-          </figure>
-        </div>
-        <div class="media-content">
-          <p class="title is-4">John Smith</p>
-          <p class="subtitle is-6">#JohnSmith</p>
-        </div>
-      </div>
-      <div class="content">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-      </div>
+<div class="container cards">
+  <div class="card" style="width: 25vmin">
+    <img src="..." class="card-img-top" alt="..." />
+    <div class="card-body">
+      <h5 class="card-title">Card title</h5>
+      <p class="card-text">
+        Some quick example text to build on the card title and make up the bulk
+        of the card's content.
+      </p>
+      <a href="#" class="btn btn-primary">Go somewhere</a>
     </div>
   </div>
-  <div class="card">
-    <div class="card-image">
-      <figure class="">
-        <img src="" alt="" />
-      </figure>
-    </div>
-    <div class="card-content">
-      <div class="media">
-        <div class="media-left">
-          <figure>
-            <img src="" alt="" />
-          </figure>
-        </div>
-        <div class="media-content">
-          <p class="title is-4">Michael Jordan</p>
-          <p class="subtitle is-6">#JohnSmith</p>
-        </div>
-      </div>
-      <div class="content">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-      </div>
+  <div class="card" style="width: 25vmin" id="card-container">
+    <img src="..." class="card-img-top" alt="..." />
+    <div class="card-body">
+      <h5 class="card-title">Card title</h5>
+      <p class="card-text">
+        Some quick example text to build on the card title and make up the bulk
+        of the card's content.
+      </p>
+      <a href="#" class="btn btn-primary">Go somewhere</a>
     </div>
   </div>
-  <div class="card">
-    <div class="card-image">
-      <figure class="">
-        <img src="" alt="" />
-      </figure>
-    </div>
-    <div class="card-content">
-      <div class="media">
-        <div class="media-left">
-          <figure>
-            <img src="" alt="" />
-          </figure>
-        </div>
-        <div class="media-content">
-          <p class="title is-4">John Smith</p>
-          <p class="subtitle is-6">#JohnSmith</p>
-        </div>
-      </div>
-      <div class="content">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-      </div>
+  <div class="card" style="width: 25vmin">
+    <img src="..." class="card-img-top" alt="..." />
+    <div class="card-body">
+      <h5 class="card-title">Card title</h5>
+      <p class="card-text">
+        Some quick example text to build on the card title and make up the bulk
+        of the card's content.
+      </p>
+      <a href="#" class="btn btn-primary">Go somewhere</a>
     </div>
   </div>
-  <div class="card">
-    <div class="card-image">
-      <figure class="">
-        <img src="" alt="" />
-      </figure>
-    </div>
-    <div class="card-content">
-      <div class="media">
-        <div class="media-left">
-          <figure>
-            <img src="" alt="" />
-          </figure>
-        </div>
-        <div class="media-content">
-          <p class="title is-4">Sarah Williams</p>
-          <p class="subtitle is-6">#JohnSmith</p>
-        </div>
-      </div>
-      <div class="content">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-      </div>
+  <div class="card" style="width: 25vmin">
+    <img src="..." class="card-img-top" alt="..." />
+    <div class="card-body">
+      <h5 class="card-title">Card title</h5>
+      <p class="card-text">
+        Some quick example text to build on the card title and make up the bulk
+        of the card's content.
+      </p>
+      <a href="#" class="btn btn-primary">Go somewhere</a>
     </div>
   </div>
 </div>
+
 <%- include('./partials/footer') %>
