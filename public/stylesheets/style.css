@@ -1,8 +1,38 @@
 body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  box-sizing: border-box;
+  height: 100vh;
+  width: 100vw;
+}
+
+nav {
+  padding: 2.5vmin;
 }
 
 a {
-  color: #00B7FF;
+  color: #00b7ff;
+}
+
+.search {
+  height: 10vmin;
+  /* background-color: gray; */
+  align-items: center;
+}
+
+#searchBar {
+  justify-content: center;
+  align-content: center;
+  width: 100%;
+}
+
+.testimonials {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+@media only screen and (max-width: 1000px) {
+  .testimonials {
+    display: flex;
+    flex-direction: column;
+  }
 }
