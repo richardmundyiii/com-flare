@@ -5,6 +5,7 @@ module.exports = {
   index,
   new: newListing,
   create,
+  show,
 };
 
 function index(req, res) {
@@ -27,5 +28,11 @@ function create(req, res) {
   listing.save(function (err) {
     if (err) console.log(err);
     res.redirect("/");
+  });
+}
+
+function show(req, res) {
+  Listing.findById(req.params.id, (err, listing) => {
+    res.render("listings/show", { title: "Details", listing });
   });
 }
