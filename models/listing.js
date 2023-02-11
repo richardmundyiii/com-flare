@@ -20,4 +20,21 @@ const listingSchema = new Schema({
     max: 6,
     required: true,
   },
+  ifrRating: {
+    type: Boolean,
+    required: true,
+  },
+  imgUrl: {
+    type: String,
+    required: false,
+  },
+  host: [
+    {
+      type: Schema.Types.ObjectId,
+      ref: "User",
+      required: true,
+    },
+  ],
 });
+
+module.exports = mongoose.model("Listing", listingSchema);

@@ -2,37 +2,44 @@
 <div>
   <h3>About Your Plane</h3>
   <form action="/listings" method="POST">
-    <div>
-      <label for="airport">Airport</label>
-      <label for="manufacturer">Manufacturer</label>
-      <label for="model">Model</label>
-      <label for="seats">Seats</label>
-      <label for="ifrCheck">IFR</label>
-    </div>
-    <div>
-      <select value="airport">
-        <option name="WVI" id="">Watsonville Municipal</option>
-        <option name="HNL" id="">Honolulu International</option>
-        <option name="FXE" id="">Ft. Lauderdale Executive</option>
-      </select>
-      <select value="manufacturer">
-        <option name="cessna" id="">Cessna</option>
-        <option name="cirrus" id="">Cirrus</option>
-        <option name="piper" id="">Piper</option>
-      </select>
-      <select value="model">
-        <option name="" id="">182</option>
-        <option name="" id="">SR22T</option>
-        <option name="" id="">Warrior III</option>
-      </select>
-      <select value="seats">
-        <option name="" id="">2</option>
-        <option name="" id="">3</option>
-        <option name="" id="">4</option>
-        <option name="" id="">5</option>
-        <option name="" id="">6</option>
-      </select>
-      <input class="form-check-input" type="checkbox" value="ifrCheck" />
+      <label for="airport">
+        Airport
+        <select name="airport">
+          <option value="WVI">Watsonville Municipal</option>
+          <option value="HNL">Honolulu International</option>
+          <option value="FXE">Ft. Lauderdale Executive</option>
+        </select>
+      </label>
+      <label for="manufacturer">
+        Manufacturer
+        <select name="manufacturer">
+          <option value="cessna">Cessna</option>
+          <option value="cirrus">Cirrus</option>
+          <option value="piper">Piper</option>
+        </select>
+      </label>
+      <label for="model">
+        Model
+        <select name="model">
+          <option value="182">182</option>
+          <option value="sr22T">SR22T</option>
+          <option value="warriorIII">Warrior III</option>
+        </select>
+      </label>
+      <label for="seats">
+        Seats
+        <select name="seats">
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+          <option value="6">6</option>
+        </select>
+      </label>
+      <label for="ifrCheck">
+        IFR
+        <input class="form-check-input" type="checkbox" name="ifrCheck" />
+      </label>
     </div>
     <button class="btn btn-warning" type="submit">Add</button>
   </form>
