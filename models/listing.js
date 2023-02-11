@@ -22,19 +22,18 @@ const listingSchema = new Schema({
   },
   ifrRating: {
     type: Boolean,
-    required: true,
   },
   imgUrl: {
     type: String,
     required: false,
   },
-  host: [
-    {
-      type: Schema.Types.ObjectId,
-      ref: "User",
-      required: true,
-    },
-  ],
+  host: {
+    type: Schema.Types.ObjectId,
+    ref: "User",
+    required: true,
+  },
+  userName: String,
+  userAvatar: String,
 });
 
 module.exports = mongoose.model("Listing", listingSchema);

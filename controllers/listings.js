@@ -12,10 +12,13 @@ function newListing(req, res) {
 
 function create(req, res) {
   req.body.ifrCheck = !!req.body.ifrCheck;
-  req.body.host = req.user.googleId;
-  const listing = new Listing(req.body);
+  req.body.host = req.user._id;
+  req.body.userName = req.user.name;
+  req.body.userAvatar = req.user.avatar;
+  console.log(req.body);
+  const listing = new Listing(req.body, req.body.host);
   listing.save(function (err) {
-    if (err) return res.redirect("/");
+    if (err) console.log(err);
     res.redirect("/");
   });
 }
