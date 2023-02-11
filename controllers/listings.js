@@ -2,9 +2,16 @@ const User = require("../models/user");
 const Listing = require("../models/listing");
 
 module.exports = {
+  index,
   new: newListing,
   create,
 };
+
+function index(req, res) {
+  Listing.find({}, (err, listings) => {
+    res.render("listings/index", { title: "All Listings", listings });
+  });
+}
 
 function newListing(req, res) {
   res.render("listings/new", { title: "Add A Listing" });

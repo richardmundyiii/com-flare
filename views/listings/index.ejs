@@ -1,0 +1,32 @@
+<%- include('../partials/header') %>
+<div class="container">
+  <h1 class="text-center mt-5">Showing All Listings</h1>
+  <table class="table table-striped mt-5">
+    <thead>
+      <tr>
+        <th>Mfr.</th>
+        <th>Model</th>
+        <th>Seats</th>
+        <th>IFR</th>
+        <th>Location</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% listings.forEach((l) => { %>
+      <tr>
+        <td><%= l.manufacturer %></td>
+        <td><%= l.model %></td>
+        <td><%= l.seats %></td>
+        <td><%= l.ifrRating %></td>
+        <td>
+          <a href="https://www.airnav.com/airport/K<%= l.airport %>"
+            ><%= l.airport %></a
+          >
+        </td>
+        <td><a href="/<%= l._id %>">Details</a></td>
+      </tr>
+      <% }) %>
+    </tbody>
+  </table>
+</div>
+<% include('../partials/footer') %>
