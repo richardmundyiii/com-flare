@@ -1,16 +1,4 @@
 <%- include('../partials/header') %>
-<script>
-  reviewStarOneEl = document.getElementById("star-one");
-  console.log(reviewStarOneEl);
-
-  reviewStarOneEl.addEventListener("click", handleStar);
-
-  function handleStar(evt) {
-    console.log(evt, evt.target);
-    evt.target.classList.remove("five-pointed-star");
-    evt.target.classList.add("star-select");
-  }
-</script>
 <div class="container">
   <h2 class="text-center">Plane Info</h2>
   <div class="text-center">
@@ -30,12 +18,31 @@
   </div>
 </div>
 
+<!-- Reviews Here -->
+<div>
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Review</th>
+        <th>Rating</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% listing.review.forEach((el) => { %>
+        <tr>
+          <td><%= el.review %></td>
+          <td><%= el.rating %></td>
+        </tr>
+      <% }) %>
+    </tbody>
+  </table>
+</div>
+
 <% if (user) { %>
 <div class="mb-4">
-  <h3 class="text-center">Be The Frist Review</h3>
-  <form action="/listings/<% listing._id %>/reviews">
+  <form action="/listings/<%= listing._id %>/reviews" method="POST">
     <div class="text-center">
-      <textarea name="review" cols="100" rows="10"></textarea>
+      <input name="review" cols="100" rows="10"></input>
     </div>
     <div class="text-center mt-3">
       <label for="rating"
@@ -49,19 +56,8 @@
         </select>
       </label>
     </div>
-    <!-- <div id="stars">
-      <span class="five-pointed-star" id="star-one" value="1"></span>
-      <span class="five-pointed-star" id="star-two" value="2"></span>
-      <span class="five-pointed-star" id="star-three" value="3"></span>
-      <span class="five-pointed-star" id="star-four" value="4"></span>
-      <span class="five-pointed-star" id="star-five" value="5"></span>
-    </div> -->
     <div class="text-center mt-3">
-      <button
-        class="btn btn-primary text-center"
-        type="submit"
-        style="width: 50%"
-      >
+      <button class="btn btn-primary text-center" style="width: 50%">
         Add Review
       </button>
     </div>

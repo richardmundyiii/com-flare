@@ -13,7 +13,7 @@ function create(req, res) {
 
     listing.review.push(req.body);
     listing.save((err) => {
-      res.redirect(`/listings/${listing._id}`);
+      res.redirect(`listings/${listing._id}`);
     });
   });
 }
