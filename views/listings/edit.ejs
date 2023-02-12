@@ -1,0 +1,48 @@
+<%- include('../partials/header') %>
+<div>
+  <h3>About Your Plane</h3>
+  <form action="/listings/<% listing._id %>/edit" method="POST">
+      <label for="airport">
+        Airport
+        <select name="airport">
+          <option value="WVI">Watsonville Municipal</option>
+          <option value="HNL">Honolulu International</option>
+          <option value="FXE">Ft. Lauderdale Executive</option>
+        </select>
+      </label>
+      <label for="manufacturer">
+        Manufacturer
+        <select name="manufacturer">
+          <option value="cessna">Cessna</option>
+          <option value="cirrus">Cirrus</option>
+          <option value="piper">Piper</option>
+        </select>
+      </label>
+      <label for="model">
+        Model
+        <select name="model">
+          <option value="182">182</option>
+          <option value="sr22T">SR22T</option>
+          <option value="warriorIII">Warrior III</option>
+        </select>
+      </label>
+      <label for="seats">
+        Seats
+        <select name="seats">
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+          <option value="6">6</option>
+        </select>
+      </label>
+      <label for="ifrCheck">
+        IFR
+        <input class="form-check-input" type="checkbox" name="ifrCheck" />
+      </label>
+    </div>
+    <button class="btn btn-warning" type="submit">Add</button>
+  </form>
+</div>
+
+<%- include('../partials/footer') %>

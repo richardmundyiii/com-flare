@@ -9,6 +9,8 @@ router.get("/new", ensureLoggedIn, listingsCtrl.new);
 
 router.get("/:id", listingsCtrl.show);
 
+router.get("/:id/edit", listingsCtrl.edit);
+
 router.post("/", ensureLoggedIn, listingsCtrl.create);
 
 module.exports = router;

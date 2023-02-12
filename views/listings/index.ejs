@@ -24,9 +24,19 @@
           >
         </td>
         <td><a href="/listings/<%= l._id %>">Details</a></td>
+        <td><% if (user === l._id) { %> <button>Edit</button></td>
+        <% } %>
       </tr>
       <% }) %>
     </tbody>
   </table>
 </div>
+<%= console.log(user) %>
+<!-- s -->
+<% listings.forEach((el) => { %>
+<!-- s -->
+<%= console.log(el.googleId) %>
+<!-- s -->
+<% }) %>
+<!-- // -->
 <% include('../partials/footer') %>

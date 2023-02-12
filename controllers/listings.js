@@ -6,6 +6,7 @@ module.exports = {
   new: newListing,
   create,
   show,
+  edit,
 };
 
 function index(req, res) {
@@ -34,5 +35,11 @@ function create(req, res) {
 function show(req, res) {
   Listing.findById(req.params.id, (err, listing) => {
     res.render("listings/show", { title: "Details", listing });
+  });
+}
+
+function edit(req, res) {
+  Listing.findById(req.params.id, (err, listing) => {
+    res.render("listings/edit", { title: "Edit Listing", listing });
   });
 }
