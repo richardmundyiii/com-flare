@@ -1,35 +1,72 @@
 <%- include('../partials/header') %>
+<script>
+  reviewStarOneEl = document.getElementById("star-one");
+  console.log(reviewStarOneEl);
+
+  reviewStarOneEl.addEventListener("click", handleStar);
+
+  function handleStar(evt) {
+    console.log(evt, evt.target);
+    evt.target.classList.remove("five-pointed-star");
+    evt.target.classList.add("star-select");
+  }
+</script>
 <div class="container">
-  <h2>Plane Info</h2>
-  <img
-    class="text-center"
-    src="/images/<%= listing.manufacturer %>.jpeg"
-    alt="<%= listing.manufacturer %> image"
-    style="width: 300px"
-  />
-  <h3><%= listing.manufacturer %><%= listing.model %></h3>
-  <h4><%= listing.seats %></h4>
-  <h4><%= listing.ifrRating %></h4>
-  <h4><%= listing.userName %></h4>
+  <h2 class="text-center">Plane Info</h2>
+  <div class="text-center">
+    <img
+      class="img-fluid"
+      src="/images/<%= listing.manufacturer %>.jpeg"
+      alt="<%= listing.manufacturer %> image"
+      style="width: 300px"
+    />
+  </div>
+  <div class="text-center">
+    <h3><%= listing.manufacturer %><%= listing.model %></h3>
+    <h4><%= listing.seats %></h4>
+    <h4><%= listing.ifrRating %></h4>
+    <h4><%= listing.userName %></h4>
+    <h4>K<%= listing.airport %></h4>
+  </div>
 </div>
 
-<div>
-  <h3>Be The Frist Review</h3>
+<% if (user) { %>
+<div class="mb-4">
+  <h3 class="text-center">Be The Frist Review</h3>
   <form action="/listings/<% listing._id %>/reviews">
-    <textarea name="review" cols="100" rows="10"></textarea>
-    <label for="rating"
-      >Rating
-      <select name="rating">
-        <option value="1">1</option>
-        <option value="1">2</option>
-        <option value="1">3</option>
-        <option value="1">4</option>
-        <option value="1">5</option>
-      </select>
-    </label>
-    <button class="btn btn-primary" type="submit">Add Review</button>
+    <div class="text-center">
+      <textarea name="review" cols="100" rows="10"></textarea>
+    </div>
+    <div class="text-center mt-3">
+      <label for="rating"
+        >Rating
+        <select name="rating">
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+        </select>
+      </label>
+    </div>
+    <!-- <div id="stars">
+      <span class="five-pointed-star" id="star-one" value="1"></span>
+      <span class="five-pointed-star" id="star-two" value="2"></span>
+      <span class="five-pointed-star" id="star-three" value="3"></span>
+      <span class="five-pointed-star" id="star-four" value="4"></span>
+      <span class="five-pointed-star" id="star-five" value="5"></span>
+    </div> -->
+    <div class="text-center mt-3">
+      <button
+        class="btn btn-primary text-center"
+        type="submit"
+        style="width: 50%"
+      >
+        Add Review
+      </button>
+    </div>
   </form>
 </div>
-
+<% } %>
 <!-- keeep EJS seperated -->
 <%- include('../partials/footer') %>
