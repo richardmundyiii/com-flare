@@ -27,11 +27,10 @@
           >
         </td>
         <td><a href="/listings/<%= l._id %>">Details</a></td>
-        <!-- // -->
-        <%= console.log(user.googleId, l.host.googleId) %>
         <!-- s -->
         <% if (user.googleId === l.host.googleId) { %>
-        <td><a href="">Edit</a></td>
+        <!-- // -->
+        <td><a href="/listings/<%= l._id %>/edit">Edit</a></td>
         <% } %>
       </tr>
       <% }) %>
