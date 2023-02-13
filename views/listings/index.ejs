@@ -9,8 +9,11 @@
         <th>Seats</th>
         <th>IFR</th>
         <th>Location</th>
+        <th>Details</th>
+        <th>Edit</th>
       </tr>
     </thead>
+
     <tbody>
       <% listings.forEach((l) => { %>
       <tr>
@@ -24,19 +27,16 @@
           >
         </td>
         <td><a href="/listings/<%= l._id %>">Details</a></td>
-        <td><% if (user === l._id) { %> <button>Edit</button></td>
+        <!-- // -->
+        <%= console.log(user.googleId, l.host.googleId) %>
+        <!-- s -->
+        <% if (user.googleId === l.host.googleId) { %>
+        <td><a href="">Edit</a></td>
         <% } %>
       </tr>
       <% }) %>
     </tbody>
   </table>
 </div>
-<%= console.log(user) %>
-<!-- s -->
-<% listings.forEach((el) => { %>
-<!-- s -->
-<%= console.log(el.googleId) %>
-<!-- s -->
-<% }) %>
-<!-- // -->
+
 <% include('../partials/footer') %>

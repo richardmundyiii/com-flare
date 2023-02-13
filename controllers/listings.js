@@ -10,9 +10,11 @@ module.exports = {
 };
 
 function index(req, res) {
-  Listing.find({}, (err, listings) => {
-    res.render("listings/index", { title: "All Listings", listings });
-  });
+  Listing.find({})
+    .populate("host")
+    .exec(function (err, listings) {
+      res.render("listings/index", { title: "All Listings", listings });
+    });
 }
 
 function newListing(req, res) {
