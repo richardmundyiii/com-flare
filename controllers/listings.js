@@ -12,11 +12,9 @@ module.exports = {
 };
 
 function index(req, res) {
-  Listing.find({})
-    .populate("host")
-    .exec(function (err, listings) {
-      res.render("listings/index", { title: "All Listings", listings });
-    });
+  Listing.find({}, function (err, listings) {
+    res.render("listings/index", { title: "All Listings", listings });
+  });
 }
 
 function newListing(req, res) {
@@ -36,10 +34,27 @@ function create(req, res) {
 }
 
 function show(req, res) {
-  Listing.findById(req.params.id, (err, listing) => {
-    res.render("listings/show", { title: "Details", listing });
-  });
+  Listing.findById(req.params.id)
+    .populate("host")
+    .exec(function (err, listing) {
+      res.render("listings/show", { title: "Details", listing });
+    });
 }
+
+// function show(req, res) {
+//   Movie.findById(req.params.id)
+//     .populate("cast")
+//     .exec(function (err, movie) {
+//       Performer.find({ _id: { $nin: movie.cast } }, function (err, performers) {
+//         console.log(performers);
+//         res.render("movies/show", {
+//           title: "Movie Detail",
+//           movie,
+//           performers,
+//         });
+//       });
+//     });
+// }
 
 function edit(req, res) {
   Listing.findById(req.params.id, (err, listing) => {

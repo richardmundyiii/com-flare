@@ -10,7 +10,6 @@
         <th>IFR</th>
         <th>Location</th>
         <th>Details</th>
-        <th>Edit</th>
       </tr>
     </thead>
 
@@ -27,13 +26,6 @@
           >
         </td>
         <td><a href="/listings/<%= l._id %>">Details</a></td>
-        <!-- s -->
-        <% if (user.googleId === l.host.googleId) { %>
-        <!-- // -->
-        <td><a href="/listings/<%= l._id %>/edit">Edit</a></td>
-        <% } else { %>
-        <td>&nbsp;</td>
-        <% } %>
       </tr>
       <% }) %>
     </tbody>

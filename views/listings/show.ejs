@@ -17,7 +17,12 @@
     <h4>K<%= listing.airport %></h4>
   </div>
 </div>
-
+<div class="container text-center">
+<% if (user.googleId === listing.host.googleId) { %>
+  <!-- // -->
+  <a href="/listings/<%= listing._id %>/edit" class="btn btn-danger" style="width=50%">Edit</a>
+  <% } %>
+</div>
 <!-- Reviews Here -->
 <div>
   <table class="table">
@@ -25,6 +30,7 @@
       <tr>
         <th>Review</th>
         <th>Rating</th>
+        <th>Edit</th>
       </tr>
     </thead>
     <tbody>
@@ -32,6 +38,7 @@
         <tr>
           <td><%= el.review %></td>
           <td><%= el.rating %></td>
+          <td>Edit Link/Button Here</td>
         </tr>
       <% }) %>
     </tbody>
@@ -64,5 +71,6 @@
   </form>
 </div>
 <% } %>
+
 <!-- keeep EJS seperated -->
 <%- include('../partials/footer') %>
