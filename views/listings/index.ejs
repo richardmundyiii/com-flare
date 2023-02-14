@@ -31,6 +31,8 @@
         <% if (user.googleId === l.host.googleId) { %>
         <!-- // -->
         <td><a href="/listings/<%= l._id %>/edit">Edit</a></td>
+        <% } else { %>
+        <td>&nbsp;</td>
         <% } %>
       </tr>
       <% }) %>

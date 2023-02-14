@@ -56,17 +56,16 @@
       </label>
       <br />
       <div class="container mt-3">
-        <button class="btn btn-warning" type="submit" style="width: 40%">
-          Update
-        </button>
-        <%= console.log(listing) %>
-        <a href="/listing/<%= listing._id %>?_method=DELETE" method="POST">
-          <button class="btn btn-danger" type="submit" style="width: 40%">
-            Delete
-          </button>
-        </a>
+        <a href="#" class="btn btn-warning" style="width: auto">Update</a>
       </div>
     </form>
+    <a
+      class="btn btn-danger"
+      href="/listings/<%= listing.id %>?_method=DELETE"
+      method="POST"
+      style="width: 50%"
+      >Delete</a
+    >
   </div>
 </div>
 

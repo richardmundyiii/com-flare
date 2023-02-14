@@ -48,4 +48,12 @@ function edit(req, res) {
 }
 
 function update(req, res) {}
-function delListing(req, res) {}
+
+function delListing(req, res) {
+  Listing.findOneAndDelete(
+    { _id: req.params.id, host: req.user._id },
+    function (err) {
+      res.redirect("/listings");
+    }
+  );
+}
