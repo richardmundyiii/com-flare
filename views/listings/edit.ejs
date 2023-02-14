@@ -59,13 +59,9 @@
         <a href="#" class="btn btn-warning" style="width: auto">Update</a>
       </div>
     </form>
-    <a
-      class="btn btn-danger"
-      href="/listings/<%= listing.id %>?_method=DELETE"
-      method="POST"
-      style="width: 50%"
-      >Delete</a
-    >
+    <form action="/listings/<%= listing.id %>?_method=DELETE" method="POST">
+      <button class="btn btn-danger" style="width: 50%">DELETE</button>
+    </form>
   </div>
 </div>
 
