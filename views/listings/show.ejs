@@ -18,9 +18,14 @@
   </div>
 </div>
 <div class="container text-center">
-<% if (user.googleId === listing.host.googleId) { %>
+  <% if (user.googleId === listing.host.googleId) { %>
   <!-- // -->
-  <a href="/listings/<%= listing._id %>/edit" class="btn btn-danger" style="width: 50%;">Edit</a>
+  <a
+    href="/listings/<%= listing._id %>/edit"
+    class="btn btn-danger"
+    style="width: 50%"
+    >Edit</a
+  >
   <% } %>
 </div>
 <!-- Reviews Here -->
@@ -35,11 +40,11 @@
     </thead>
     <tbody>
       <% listing.review.forEach((el) => { %>
-        <tr>
-          <td><%= el.review %></td>
-          <td><%= el.rating %></td>
-          <td>Edit Link/Button Here</td>
-        </tr>
+      <tr>
+        <td><%- el.review.replaceAll('\n', '<br />') %></td>
+        <td><%= el.rating %></td>
+        <td>Edit Link/Button Here</td>
+      </tr>
       <% }) %>
     </tbody>
   </table>
@@ -49,7 +54,7 @@
 <div class="mb-4">
   <form action="/listings/<%= listing._id %>/reviews" method="POST">
     <div class="text-center">
-      <input name="review" cols="100" rows="10"></input>
+      <textarea name="review" cols="50" rows="5"></textarea>
     </div>
     <div class="text-center mt-3">
       <label for="rating"
