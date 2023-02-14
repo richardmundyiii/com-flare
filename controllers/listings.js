@@ -28,7 +28,6 @@ function create(req, res) {
   req.body.host = req.user._id;
   req.body.userName = req.user.name;
   req.body.userAvatar = req.user.avatar;
-  console.log(req.body);
   const listing = new Listing(req.body, req.body.host);
   listing.save(function (err) {
     if (err) console.log(err);
