@@ -10,11 +10,11 @@
     />
   </div>
   <div class="text-center">
-    <h3><%= listing.manufacturer %><%= listing.model %></h3>
-    <h4><%= listing.seats %></h4>
-    <h4><%= listing.ifrRating %></h4>
-    <h4><%= listing.userName %></h4>
-    <h4>K<%= listing.airport %></h4>
+    <h3><%= listing.manufacturer %> <%= listing.model %></h3>
+    <h4>Seats: <%= listing.seats %></h4>
+    <h4>IFR Equiped: <%= listing.ifrRating === true ? 'Yes' : 'No' %></h4>
+    <h4>Owner: <%= listing.userName %></h4>
+    <h4>Airport: K<%= listing.airport %></h4>
   </div>
 </div>
 <div class="container text-center">
