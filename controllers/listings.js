@@ -7,6 +7,8 @@ module.exports = {
   create,
   show,
   edit,
+  update,
+  delListing,
 };
 
 function index(req, res) {
@@ -45,3 +47,6 @@ function edit(req, res) {
     res.render("listings/edit", { title: "Edit Listing", listing });
   });
 }
+
+function update(req, res) {}
+function delListing(req, res) {}

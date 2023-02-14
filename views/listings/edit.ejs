@@ -3,13 +3,12 @@
   #edit-listing-container {
     display: flex;
     flex-direction: row;
-    height: 50vw;
-    width: 50vw;
+    height: 20vw;
     justify-content: center;
     align-items: center;
   }
 </style>
-<h3>About Your Plane</h3>
+<h3 class="text-center pt-5 mt-5">About Your Plane</h3>
 <div class="container" id="edit-listing-container">
   <div class="mt-5">
     <form
@@ -60,9 +59,12 @@
         <button class="btn btn-warning" type="submit" style="width: 40%">
           Update
         </button>
-        <button class="btn btn-danger" type="submit" style="width: 40%">
-          Delete
-        </button>
+        <%= console.log(listing) %>
+        <a href="/listing/<%= listing._id %>?_method=DELETE" method="POST">
+          <button class="btn btn-danger" type="submit" style="width: 40%">
+            Delete
+          </button>
+        </a>
       </div>
     </form>
   </div>
