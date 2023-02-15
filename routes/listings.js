@@ -11,6 +11,8 @@ router.get("/:id", listingsCtrl.show);
 
 router.get("/:id/edit", ensureLoggedIn, listingsCtrl.edit);
 
+router.get("/:id/reserve", ensureLoggedIn, listingsCtrl.reserve);
+
 router.put("/:id/edit", ensureLoggedIn, listingsCtrl.update);
 
 router.post("/", ensureLoggedIn, listingsCtrl.create);

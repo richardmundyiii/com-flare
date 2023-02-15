@@ -7,7 +7,9 @@ module.exports = {
 };
 
 function index(req, res) {
-  Listing.findById({ _id: User.id }, function (err, listings) {
-    res.render("user/index", { title: "User Profile", listings });
-  });
+  Listing.find({})
+    .populate("host")
+    .exec(function (err, listings) {
+      res.render("user/index", { title: "User Profile", listings });
+    });
 }

@@ -9,6 +9,7 @@ module.exports = {
   edit,
   update,
   delListing,
+  reserve,
 };
 
 function index(req, res) {
@@ -53,7 +54,14 @@ function delListing(req, res) {
   Listing.findOneAndDelete(
     { _id: req.params.id, host: req.user._id },
     function (err) {
-      res.redirect("/listings");
+      res.redirect("/listings", { title: "All Listings" });
     }
   );
 }
+
+// function reserve(req, res) {
+//   Listing.findByIdAndUpdate(req.params.id, (err, listing) => {
+//     req.body.date = s;
+//     listing.save();
+//   });
+// }

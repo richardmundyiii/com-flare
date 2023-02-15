@@ -25,6 +25,22 @@ const reviewSchema = new Schema(
   }
 );
 
+const reservationSchema = new Schema(
+  {
+    date: {
+      type: Date,
+      required: true,
+    },
+    host: {
+      type: Schema.Types.ObjectId,
+      required: true,
+    },
+  },
+  {
+    timestamps: true,
+  }
+);
+
 const listingSchema = new Schema({
   airport: {
     type: String,
@@ -59,6 +75,7 @@ const listingSchema = new Schema({
   userName: String,
   userAvatar: String,
   review: [reviewSchema],
+  reservation: [reservationSchema],
 });
 
 module.exports = mongoose.model("Listing", listingSchema);
