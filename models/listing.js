@@ -27,8 +27,14 @@ const reviewSchema = new Schema(
 
 const reservationSchema = new Schema(
   {
-    date: {
+    startDate: {
       type: Date,
+      required: true,
+      min: new Date().toISOString().split("T")[0],
+    },
+    numberOfDays: {
+      type: Number,
+      min: 1,
       required: true,
     },
     host: {
