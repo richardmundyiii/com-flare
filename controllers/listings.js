@@ -10,6 +10,7 @@ module.exports = {
   update,
   delListing,
   reserve,
+  createReservation,
 };
 
 function index(req, res) {
@@ -59,9 +60,15 @@ function delListing(req, res) {
   );
 }
 
-// function reserve(req, res) {
-//   Listing.findByIdAndUpdate(req.params.id, (err, listing) => {
-//     req.body.date = s;
-//     listing.save();
-//   });
-// }
+function reserve(req, res) {
+  Listing.findById(req.params.id, (err, listing) => {
+    res.render("listings/reserve", {
+      title: "Make A Reservation",
+      listing,
+    });
+  });
+}
+
+function createReservation(req, res) {
+  console.log("working");
+}

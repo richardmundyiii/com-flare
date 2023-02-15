@@ -7,7 +7,7 @@ router.get("/", listingsCtrl.index);
 
 router.get("/new", ensureLoggedIn, listingsCtrl.new);
 
-router.get("/:id", listingsCtrl.show);
+router.get("/:id", ensureLoggedIn, listingsCtrl.show);
 
 router.get("/:id/edit", ensureLoggedIn, listingsCtrl.edit);
 
