@@ -20,14 +20,14 @@ router.get(
   )
 );
 
-router.get(
-  "/oauth2callback",
+router.get("/oauth2callback", function (req, res, next) {
+  const redirectTo = req.session.redirectTo;
+  delete req.session.redirectTo;
   passport.authenticate("google", {
-    successRedirect: "/",
-    // Change to what's best for YOUR app
+    successRedirect: redirectTo || "/", //-> replace '/' as desired
     failureRedirect: "/",
-  })
-);
+  })(req, res, next); // Call the middleware returned by passport
+});
 
 router.get("/logout", function (req, res) {
   req.logout(function () {
