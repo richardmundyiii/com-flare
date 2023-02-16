@@ -15,5 +15,10 @@ function show(req, res) {
 }
 
 function create(req, res) {
-  console.log("working");
+  Listing.findById(req.params.id, (err, listing) => {
+    listing.reservations.push(req.body);
+    listing.save(function (err) {
+      res.redirect(`/listings/${listing._id}`);
+    });
+  });
 }

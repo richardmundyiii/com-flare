@@ -9,8 +9,6 @@ module.exports = {
   edit,
   update,
   delListing,
-  reserve,
-  createReservation,
 };
 
 function index(req, res) {
@@ -58,17 +56,4 @@ function delListing(req, res) {
       res.redirect("/listings", { title: "All Listings" });
     }
   );
-}
-
-function reserve(req, res) {
-  Listing.findById(req.params.id, (err, listing) => {
-    res.render("listings/reserve", {
-      title: "Make A Reservation",
-      listing,
-    });
-  });
-}
-
-function createReservation(req, res) {
-  console.log("working");
 }
