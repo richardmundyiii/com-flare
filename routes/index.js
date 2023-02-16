@@ -1,11 +1,10 @@
 const express = require("express");
 const router = express.Router();
 const passport = require("passport");
+const indexCtrl = require("../controllers/index");
 
 /* GET home page. */
-router.get("/", function (req, res, next) {
-  res.render("index", { title: "Com Flare" });
-});
+router.get("/", indexCtrl.index);
 
 router.get(
   "/auth/google",
@@ -21,7 +20,8 @@ router.get(
 );
 
 router.get("/oauth2callback", function (req, res, next) {
-  const redirectTo = req.session.redirectTo;
+  const redirectTo = `/user/${req.session.redirectTo}`;
+  console.log(redirectTo);
   delete req.session.redirectTo;
   passport.authenticate("google", {
     successRedirect: redirectTo || "/user/:id", //-> replace '/' as desired

@@ -35,7 +35,7 @@ function create(req, res) {
 
 function show(req, res) {
   Listing.findById(req.params.id)
-    .populate("host")
+    .populate("host", "user")
     .exec(function (err, listing) {
       res.render("listings/show", { title: "Details", listing });
     });
@@ -47,7 +47,17 @@ function edit(req, res) {
   });
 }
 
-function update(req, res) {}
+function update(req, res) {
+  Listing.findOneAndUpdate(
+    { _id: req.params.id, host: req.user._id },
+    req.body,
+    { new: true },
+    function (err, listing) {
+      if (err || !listing) return res.redirect("/listings");
+      res.redirect(`/listings/${listing._id}`);
+    }
+  );
+}
 
 function delListing(req, res) {
   Listing.findOneAndDelete(
