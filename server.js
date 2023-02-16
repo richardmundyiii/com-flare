@@ -15,6 +15,7 @@ const indexRouter = require("./routes/index");
 const listingsRouter = require("./routes/listings");
 const reviewsRouter = require("./routes/reviews");
 const userRouter = require("./routes/user");
+const reservationsRouter = require("./routes/reservations");
 
 const app = express();
 
@@ -48,6 +49,7 @@ app.use("/", indexRouter);
 app.use("/listings", listingsRouter);
 app.use("/", reviewsRouter);
 app.use("/user", userRouter);
+app.use("/", reservationsRouter);
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {

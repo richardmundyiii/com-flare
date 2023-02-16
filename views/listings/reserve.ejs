@@ -9,9 +9,9 @@
     />
   </div>
   <div class="text-center mt-5">
-    <form action="/listings/<%= listing._id %>/reserve">
+    <form action="/listings/<%= listing._id %>/reservations" method="POST">
       <label
-        >Start <%= console.log(new Date().toISOString().split('T')[0]) %>
+        >Start
         <input type="datetime-local" required />
       </label>
       <label
@@ -27,8 +27,9 @@
         </select>
       </label>
       <br />
-      <a href="" class="btn btn-primary mt-5" style="width: 30vw">Reserve</a>
+      <button class="btn btn-primary mt-5" style="width: 30vw" type="submit">
+        Reserve
+      </button>
     </form>
   </div>
 </div>
-<%- include('../partials/footer') %>

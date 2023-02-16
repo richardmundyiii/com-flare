@@ -81,7 +81,7 @@ const listingSchema = new Schema({
   userName: String,
   userAvatar: String,
   review: [reviewSchema],
-  reservation: [reservationSchema],
+  reservations: [reservationSchema],
 });
 
 module.exports = mongoose.model("Listing", listingSchema);
