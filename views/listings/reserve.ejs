@@ -1,35 +1,39 @@
 <%- include('../partials/header') %>
 <div class="container-fluid" style="height: 50vh">
-  <h1 class="text-center mt-5">Book A Reservation</h1>
-  <div class="text-center">
-    <img
-      src="/images/<%= listing.manufacturer %>.jpeg"
-      alt="plane photo"
-      style="height: 30vmin"
-    />
-  </div>
-  <div class="text-center mt-5">
-    <form action="/listings/<%= listing._id %>/reservations" method="POST">
-      <label
-        >Start
-        <input type="datetime-local" required />
-      </label>
-      <label
-        >Number of Days
-        <select name="numberOfDays">
-          <option value="1">1</option>
-          <option value="2">2</option>
-          <option value="3">3</option>
-          <option value="4">4</option>
-          <option value="5">5</option>
-          <option value="6">6</option>
-          <option value="7">7</option>
-        </select>
-      </label>
-      <br />
-      <button class="btn btn-primary mt-5" style="width: 30vw" type="submit">
-        Reserve
-      </button>
-    </form>
+  <div class="card">
+    <div class="card-header">
+      <h1 class="text-center mt-1">Book A Reservation</h1>
+    </div>
+    <div class="card-image text-center mt-4">
+      <img
+        src="/images/<%= listing.manufacturer %>.jpeg"
+        alt="plane photo"
+        style="height: 30vmin"
+      />
+    </div>
+    <div class="text-center mt-5 p-3">
+      <form action="/listings/<%= listing._id %>/reservations" method="POST">
+        <label
+          >Start
+          <input type="datetime-local" required />
+        </label>
+        <label
+          >Number of Days
+          <select name="numberOfDays">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+          </select>
+        </label>
+        <br />
+        <button class="btn btn-primary mt-5" style="width: 30vw" type="submit">
+          Reserve
+        </button>
+      </form>
+    </div>
   </div>
 </div>
