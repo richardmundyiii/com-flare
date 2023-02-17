@@ -35,7 +35,7 @@ function create(req, res) {
 
 function show(req, res) {
   Listing.findById(req.params.id)
-    .populate("host", "user")
+    .populate("host")
     .exec(function (err, listing) {
       res.render("listings/show", { title: "Details", listing });
     });
