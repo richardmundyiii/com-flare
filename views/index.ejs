@@ -15,35 +15,45 @@
     Your Next Dream Flight Is Just A Click Away
   </h3>
 </div>
-<!-- <div class="container cards">
+<h3 class="text-center mt-5">Testimonials</h3>
+<div class="container cards">
   <div class="card" style="width: 25vmin">
-    <img src="images/reviewPlaceholder.png" class="card-img-top" alt="..." />
+    <img
+      src="<%= listings[0].review[0].userAvatar %>"
+      class="card-img-top"
+      alt="..."
+    />
     <div class="card-body">
-      <h5 class="card-title">User Review</h5>
-      <p class="card-text">
-        Some really good review from a user who ejoyed using our app.
-      </p>
+      <h5 class="card-title"><%= listings[0].review[0].userName %></h5>
+      <h6 class="text-center"><%= listings[0].review[0].rating %> Stars</h6>
+      <p class="card-text"><%= listings[0].review[0].review %></p>
     </div>
   </div>
   <div class="card" style="width: 25vmin">
-    <img src="images/reviewPlaceholder.png" class="card-img-top" alt="..." />
+    <img
+      src="<%= listings[2].review[0].userAvatar %>"
+      class="card-img-top"
+      alt="<%= listings[2].review[0].userName%>'s Profile Photo"
+    />
     <div class="card-body">
-      <h5 class="card-title">Card title</h5>
-      <p class="card-text">
-        Another satisfied user after they took their family flying around the
-        Florida Keys.
-      </p>
+      <h5 class="card-title"><%= listings[2].review[0].userName %></h5>
+      <h6 class="text-center"><%= listings[2].review[0].rating %> Stars</h6>
+      <p class="card-text"><%= listings[2].review[0].review %></p>
     </div>
   </div>
   <div class="card" style="width: 25vmin">
-    <img src="images/reviewPlaceholder.png" class="card-img-top" alt="..." />
+    <img
+      src="<%= listings[4].review[0].userAvatar %>"
+      class="card-img-top"
+      alt="..."
+    />
     <div class="card-body">
-      <h5 class="card-title">Card title</h5>
-      <p class="card-text">
-        Who wouldn't leave an awesome review because this app is fantastic!
-      </p>
+      <h5 class="card-title"><%= listings[4].review[0].userName %></h5>
+      <h6 class="text-center"><%= listings[4].review[0].rating %></h6>
+      <p class="card-text"><%= listings[4].review[0].review %></p>
     </div>
-  </div> -->
+  </div>
+  -->
 </div>
 
 <%- include('./partials/footer') %>
