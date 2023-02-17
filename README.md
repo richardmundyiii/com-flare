@@ -12,7 +12,7 @@
 
 ##### An app to help you locate and rent general aviation aircrafts!
 
-[![LinkedIn Badge](https://img.shields.io/badge/-@profpan396-blue?style=flat&logo=Linkedin&logoColor=black)](https://www.linkedin.com/in/richardmundy3/)
+[![LinkedIn Badge](https://img.shields.io/badge/-@richardmundy3-blue?style=flat&logo=Linkedin&logoColor=black)](https://www.linkedin.com/in/richardmundy3/)
 
 ## :pencil: Description
 
@@ -22,10 +22,6 @@ Community Flare is the first and only app that connects pilots with plane owners
 
 ## :camera_flash: Screenshots
 
-|            Description             | Screenshot |
-| :--------------------------------: | ---------- |
-| <h3 align="center">Wireframes</h3> | <img       |
-
-src="https://i.ibb.co/vZp15VY/Screenshot-2023-02-16-at-9-14-02-PM.png"
-width="700"
-/> |
+|            Description             | Screenshot                                                                                 |
+| :--------------------------------: | ------------------------------------------------------------------------------------------ |
+| <h3 align="center">Wireframes</h3> | <img src="https://i.ibb.co/vZp15VY/Screenshot-2023-02-16-at-9-14-02-PM.png" width="700" /> |
