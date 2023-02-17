@@ -116,10 +116,10 @@ Community Flare is the first and only app that connects pilots with plane owners
 
 ## :satellite: Upcoming Features
 
-- [:star:] Animations on sliding buttons
+- Filter listings by plane model, size, IFR capabilities
 
-- [:x:] Comment functionality on posts to encourage discussion
+- Search based on GEO location
 
-- [:x:] ~~Tinder API Integration~~
+- User photo uploads
 
 </div>
