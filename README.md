@@ -22,6 +22,8 @@ Community Flare is the first and only app that connects pilots with plane owners
 
 ## :camera_flash: Screenshots
 
-|            Description             | Screenshot                                                                                 |
-| :--------------------------------: | ------------------------------------------------------------------------------------------ |
-| <h3 align="center">Wireframes</h3> | <img src="https://i.ibb.co/vZp15VY/Screenshot-2023-02-16-at-9-14-02-PM.png" width="700" /> |
+|             Description              | Screenshot                                                                                 |
+| :----------------------------------: | ------------------------------------------------------------------------------------------ |
+|  <h3 align="center">Wireframes</h3>  | <img src="https://i.ibb.co/vZp15VY/Screenshot-2023-02-16-at-9-14-02-PM.png" width="700" /> |
+| <h3 align="center">Profile Page</h3> | <img src="https://i.ibb.co/CPY4Nxw/Screenshot-2023-02-16-at-9-31-38-PM.png" width="700" /> |
+|  <h3 align="center">Show All </h3>   | <img src="https://i.ibb.co/s50sT71/Screenshot-2023-02-16-at-9-31-47-PM.png" width="700" /> |
