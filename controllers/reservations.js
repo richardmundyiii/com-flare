@@ -16,8 +16,10 @@ function show(req, res) {
 
 function create(req, res) {
   Listing.findById(req.params.id, (err, listing) => {
+    req.body.host = req.user._id;
     listing.reservations.push(req.body);
     listing.save(function (err) {
+      console.log(err);
       res.redirect(`/listings/${listing._id}`);
     });
   });
