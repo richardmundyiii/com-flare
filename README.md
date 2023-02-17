@@ -1,6 +1,14 @@
+<div style="text-align: center">
+
 # Community Flare (ComFlare)
 
+</div>
+
+<div>
+
 ## An app to help you locate and rent general aviation aircrafts!
+
+</div>
 
 <div id="header" align="center">
 
