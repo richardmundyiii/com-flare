@@ -27,27 +27,21 @@
       <label for="manufacturer">
         Manufacturer
         <select name="manufacturer">
-          <option value="cessna">Cessna</option>
-          <option value="cirrus">Cirrus</option>
-          <option value="piper">Piper</option>
+          <option value="<%= listing.manufacturer %>">
+            <%= listing.manufacturer %>
+          </option>
         </select>
       </label>
       <label for="model">
         Model
         <select name="model">
-          <option value="182">182</option>
-          <option value="sr22T">SR22T</option>
-          <option value="warriorIII">Warrior III</option>
+          <option value="<%= listing.model %>"><%= listing.model %></option>
         </select>
       </label>
       <label for="seats">
         Seats
         <select name="seats">
-          <option value="2">2</option>
-          <option value="3">3</option>
-          <option value="4">4</option>
-          <option value="5">5</option>
-          <option value="6">6</option>
+          <option value="<%= listing.seats %>"><%= listing.seats %></option>
         </select>
       </label>
       <label for="ifrCheck">
