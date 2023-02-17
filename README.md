@@ -58,31 +58,68 @@ Community Flare is the first and only app that connects pilots with plane owners
 ## :fire: Getting Started
 
 <details open>
-  <summary> How to Create a Post </summary>
-    1. Type in your answers to each of the 3 randomly-generated mini-survey questions.
-    2. Click on "Add Survey" to post your responses so others may see them.
-    3. Click on the "X" in the bottom-right corner to delete a post.
+  <summary> Logging In </summary>
+    1. Click on the 'Login" button in the top right corner.
+    2. Sign-in using your Google account.
+    3. Once logged in, you will be directed to your profile page.
 </details>
 
 <details>
-  <summary> How to Interact With Others' Posts </summary>
-    1. Posts may be "liked" or "disliked" by clicking on the thumbs up or down button on their card.
-    2. To reveal the author of a post, hover over the `Who could it possibly be?` button.
-    3. To see more posts by the same user, click on the revealed username and profile picture.
+  <summary> Reserving A Plane </summary>
+    1. Once logged in, click on 'Listings' found in the NavBar
+    2. All available listings will populate the page. Find a plane based on its current airport location.
+    3. Click 'Details"
+    4. You will see all the plane's detils and all reviews. 
+    5. Click 'Reserve' 
+    6. Enter reservation start date and how mnay days you need the plane.
+</details>
+
+<details>
+  <summary> Adding a Review </summary>
+    1. Once logged in, click on 'Listings' found in the NavBar
+    2. Click on 'Details'
+</details>
+
+<details>
+  <summary> Adding A Plane </summary>
+    1. Once logged in, click on 'Add Listing' in the profile dropdown menu.
+    2. Enter all plane information.
+    3. Click 'Add"
+    4. At the bottom of the plane detail's page, write your review and add a rating.
+    5. Click 'Add Review' and see the page update.
+</details>
+
+<details>
+  <summary> Viewing Reservations / Listings </summary>
+    1. Once logged in, click on 'Profile' found in user dropdown menu.
+    2. Click 'Profile'
+    3. All listings and reservations will be found on your profile page.
 </details>
 
 <details open>
   <summary> Trello Board </summary>
-  <a href="https://trello.com/b/x4ViComX/meet-your-classmates-project-4"
-    > https://trello.com/b/x4ViComX/meet-your-classmates-project-4 </a
+  <a href="https://trello.com/b/zYQzwzzn/comflare"
+    > https://trello.com/b/zYQzwzzn/comflare </a
   >
 </details>
 
 <details open>
   <summary> Deployed Link (Heroku) </summary>
-  <a href="https://meetyourclassmates.herokuapp.com/"
-    > https://meetyourclassmates.herokuapp.com/ </a
+  <a href="https://com-flare-rdm.herokuapp.com/"
+    > https://com-flare-rdm.herokuapp.com/ </a
   >
 </details>
+
+</div>
+
+<div>
+
+## :satellite: Upcoming Features
+
+- [:star:] Animations on sliding buttons
+
+- [:x:] Comment functionality on posts to encourage discussion
+
+- [:x:] ~~Tinder API Integration~~
 
 </div>
